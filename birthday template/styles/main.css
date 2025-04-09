@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.next-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #ff69b4;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.next-button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Apply pastel yellow background ONLY to page2 */
+body.page2 {
+    background: #FFF8DC; /* Soft pastel yellow */
+    color: #333; /* Dark grey text for better readability */
+}
+/* Page 3 - Side-by-Side Comparison */
+body.page3 {
+    background: #FAE3D9; /* Soft peach color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.comparison-container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side - Text */
+.text-side {
+    width: 50%;
+    background: #F9D5E5; /* Soft pink */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.text-side h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-side p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Right Side - Image */
+.image-side {
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.image-side img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.page4 {
+    background: linear-gradient(to right, #ffdee9, #b5fffc); /* Light pink & sky blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Limits the container width */
+    position: relative;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Adds space below title */
+    z-index: 10;
+    color: lightsalmon;
+}
+
+#gallery-image {
+    max-width: 50%; /* Adjusts image size */
+    max-height: 60vh; /* Limits height to prevent full-screen images */
+    object-fit: contain; /* Ensures images fit well without distortion */
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+.page5 {
+    background: linear-gradient(to right, #ffe6fa, #e3fdfd); /* Cute pastel pink & blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff69b4; /* Cute pink */
+    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+#final-image {
+    max-width: 50%;
+    max-height: 60vh;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.audio-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.audio-btn:hover {
+    background-color: #ff1493;
+}
